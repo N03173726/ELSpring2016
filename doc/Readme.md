@@ -1,2 +1,1 @@
-Documentation Directory. All your documentation should go here.
-
+Put all of the documentation generated for your project in this directory.

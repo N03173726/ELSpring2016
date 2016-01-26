@@ -1,2 +1,1 @@
-Code Directory. All your code should go here. Make sure files are named as explicitly as possible.
-
+This is the code directory that will be used for the programs you develop for this project. Make sure that you decide on explicit and continuous naming conventions before you begin working on the project. This will save you a lot of time and confusion.
