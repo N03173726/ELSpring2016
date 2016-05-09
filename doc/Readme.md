@@ -1,1 +1,1 @@
-Put all of the documentation generated for your project in this directory.
+This directory contains all of the documentation associated with our project for Embedded Linux Spring 2016. In the main directory you fill find pdf files of both the midterm and final progress reports for this project. In the logs folder you fill find assorted output from ansible setup sessions for the server cluster and screen caps of program output collected during this project.

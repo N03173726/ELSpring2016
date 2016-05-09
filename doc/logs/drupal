@@ -1,0 +1,313 @@
+$ ansible-playbook -i inventory playbooks/drupal/main.yml -k
+SSH password: 
+ ___________________
+< PLAY [webservers] >
+ -------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ ______________
+< TASK [setup] >
+ --------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ _____________________________________________________
+< TASK [Indicate Ansible is deploying to the server.] >
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ ____________________________________________________
+< TASK [Check if Drupal has already been installed.] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ ________________
+< TASK [include] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+included: /home/christmas/Spring2016/embeddedLinux/dramble/raspberry-pi-dramble/playbooks/drupal/tasks/deploy.yml for 192.168.0.44
+ __________________________________________
+< TASK [Ensure /var/www directory exists.] >
+ ------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ ______________________________________
+< TASK [Ensure drupal_docroot exists.] >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ ___________________________________________________
+/ TASK [Ensure staging config directory has correct \
+\ permissions.]                                     /
+ ---------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+skipping: [192.168.0.44]
+ ____________________________________________
+< TASK [Download Drupal to the temp folder.] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ______________________________________
+< TASK [Expand Drupal in the docroot.] >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ [WARNING]: Consider using unarchive module rather than running tar
+
+ ____________________________________________________
+< TASK [Fix permissions on expanded copy of Drupal.] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ [WARNING]: Consider using file module with owner rather than running chown
+
+ _________________________________________
+< TASK [Check out Drupal to the docroot.] >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+skipping: [192.168.0.44]
+ ___________________________________________
+< TASK [Copy settings.php file into place.] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ _______________________________________________________
+< TASK [Set permissions on settings.php (pre-install).] >
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ____________________________________________________
+< TASK [Ensure settings.php has proper permissions.] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+skipping: [192.168.0.44]
+ ________________
+< TASK [include] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+included: /home/christmas/Spring2016/embeddedLinux/dramble/raspberry-pi-dramble/playbooks/drupal/tasks/files.yml for 192.168.0.44
+ ___________________________________________
+< TASK [Ensure Drupal files folder exists.] >
+ -------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ________________________________________________
+< TASK [Symlink Drupal files folder into place.] >
+ ------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ________________
+< TASK [include] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+included: /home/christmas/Spring2016/embeddedLinux/dramble/raspberry-pi-dramble/playbooks/drupal/tasks/install.yml for 192.168.0.44
+ ________________________
+< TASK [Install Drupal.] >
+ ------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ _____________________________________________
+< TASK [Wait for Drupal to get bootstrapped.] >
+ ---------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+Pausing for 5 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [192.168.0.44]
+ _______________________________________________________
+< TASK [Override the generated site UUID with our own.] >
+ -------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ____________________________________________________
+< TASK [Ensure settings.php has proper permissions.] >
+ ----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ____________________________________________
+< TASK [Indicate Drupal has been installed.] >
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ ________________
+< TASK [include] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+skipping: [192.168.0.44]
+ ________________
+< TASK [include] >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+included: /home/christmas/Spring2016/embeddedLinux/dramble/raspberry-pi-dramble/playbooks/drupal/tasks/cron.yml for 192.168.0.44
+ _____________________________
+< TASK [Add Drupal cron job.] >
+ -----------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+changed: [192.168.0.44]
+ _____________________________________________________
+/ TASK [Indicate Ansible is finished deploying to the \
+\ server.]                                            /
+ -----------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ok: [192.168.0.44]
+ ____________
+< PLAY RECAP >
+ ------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+192.168.0.44               : ok=23   changed=12   unreachable=0    failed=0   
+
+
+ _________________________________________________________
+< TASK [geerlingguy.mysql : Disallow root login remotely] >
+ ---------------------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+failed: [192.168.0.50] (item=DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')) => {"changed": false, "cmd": ["mysql", "-NBe", "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')"], "delta": "0:00:00.082686", "end": "2016-05-03 21:35:55.216694", "failed": true, "item": "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')", "rc": 1, "start": "2016-05-03 21:35:55.134008", "stderr": "ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)", "stdout": "", "stdout_lines": [], "warnings": []}
+ ______________________________________________________
+
