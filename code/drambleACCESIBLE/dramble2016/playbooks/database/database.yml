@@ -1,0 +1,18 @@
+---
+- hosts: database
+  become: yes
+
+  vars_files:
+    - vars.yml
+    - ../../config.yml
+
+  pre_tasks:
+    - name: Ensure sudo is installed.
+      apt: name=sudo state=present
+
+  roles:
+    - { role: geerlingguy.firewall, tags: ['firewall'] }
+    - { role: geerlingguy.security, tags: ['security'] }
+    - { role: geerlingguy.mysql, tags: ['mysql'] }
+    - { role: geerlingguy.munin-node, tags: ['munin-node'] }
+    - { role: ../roles/leds, tags: ['leds'] }
